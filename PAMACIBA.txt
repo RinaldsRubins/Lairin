@@ -1,0 +1,40 @@
+================================================================================
+  LAIRIN.LV — cPanel IZVIETOŠANA (Git, bez ZIP)
+================================================================================
+
+  Git repozitorijs:  ~5 MB   (bez vendor/)
+  Serverī pēc deploy: ~35 MB  (composer automātiski)
+
+  PILNA INSTRUKCIJA: docs/GIT-DEPLOY.md
+
+--------------------------------------------------------------------------------
+ĪSS CEĻŠ
+--------------------------------------------------------------------------------
+
+  VIENREIZ (cPanel):
+  1. Git Version Control → Clone → github.com/JUSU_KONTS/lairin
+  2. Document Root → /home/JUSU_LIETOTAJS/lairin/public
+  3. Deploy HEAD Commit
+  4. MySQL Database Wizard → izveidot DB
+  5. Atvērt https://lairin.lv/setup.php → instalēt
+  6. Dzēst public/setup.php
+
+  IKREIZ (izmaiņas):
+  1. Datorā: npm run build  (ja mainījāt dizainu)
+  2. git add . && git commit && git push
+  3. cPanel → Git → Pull/Deploy → Deploy HEAD Commit
+
+--------------------------------------------------------------------------------
+ADMIN
+--------------------------------------------------------------------------------
+  URL:     https://lairin.lv/login
+  E-pasts: admin@lairin.lv
+  Parole:  Lairin2026!  >>> NOMMAINIET! <<<
+
+--------------------------------------------------------------------------------
+CRON (cPanel → Cron Jobs)
+--------------------------------------------------------------------------------
+  * * * * * cd /home/JUSU_LIETOTAJS/lairin && ea-php83 artisan schedule:run
+  * * * * * cd /home/JUSU_LIETOTAJS/lairin && ea-php83 artisan queue:work --stop-when-empty
+
+================================================================================

@@ -1,0 +1,33 @@
+{
+    "name": "Lairin — IT risinājumi Latvijā",
+    "short_name": "Lairin",
+    "description": "Premium IT partneris Latvijā — infrastruktūra, kiberdrošība, AI, digitalizācija, GIS un dronu pakalpojumi.",
+    "start_url": "https://lairin.lv/",
+    "scope": "https://lairin.lv/",
+    "display": "standalone",
+    "background_color": "#0F172A",
+    "theme_color": "#2563EB",
+    "orientation": "portrait-primary",
+    "lang": "lv",
+    "dir": "ltr",
+    "icons": [
+        {
+            "src": "/images/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(.*)$ /home/JUSU_LIETOTAJS/lairin/public/$1 [L]
+</IfModule>
+
+# INSTRUKCIJA:
+# 1. Aizstajiet JUSU_LIETOTAJS ar savu cPanel lietotajvardu
+#    (piem. ja celš ir /home/lairinlv/ → lietotajvards ir lairinlv)
+# 2. Ievietojiet so failu ka: public_html/.htaccess
+# 3. Izmantojiet TIKAI ja nevarat mainit Document Root uz lairin/public
