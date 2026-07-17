@@ -1,5 +1,6 @@
 ---
 deployment:
   tasks:
-    - chmod +x scripts/cpanel-deploy.sh
-    - /bin/bash scripts/cpanel-deploy.sh
+    - export COMPOSER_ALLOW_SUPERUSER=1
+    - /opt/cpanel/composer/bin/composer install --no-dev --optimize-autoloader --no-interaction
+    - chmod -R 775 storage bootstrap/cache
